@@ -14,8 +14,8 @@ public class person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name ="name", nullable = false)
-    private String name;
+    @Column(name ="nombreUsuario", nullable = false)
+    private String nombreUsuario;
 
     @Column(name = "email")
     private String email;
@@ -23,19 +23,19 @@ public class person {
     @Column(name = "telefono")
     private Long telefono;
 
-    @Column(name = "direccion")
-    private String direccion;
+    @Column(name = "clave")
+    private String clave;
 
     public Long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombreUsuario(String name) {
+        this.nombreUsuario = name;
     }
 
     public String getEmail() {
@@ -54,13 +54,11 @@ public class person {
         this.telefono = telefono;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getClave() {
+        return clave;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setClave(String clave) {
+        this.clave = clave;
     }
-
-
 }

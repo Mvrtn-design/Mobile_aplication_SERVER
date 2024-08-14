@@ -12,25 +12,28 @@ import lombok.Setter;
 public class person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private static Long id;
 
     @Column(name ="nombreUsuario", nullable = false)
-    private String nombreUsuario;
+    private static String nombreUsuario;
 
     @Column(name = "email")
-    private String email;
+    private static String email;
 
     @Column(name = "telefono")
-    private Long telefono;
+    private static Long telefono;
 
     @Column(name = "clave")
-    private String clave;
+    private static String clave;
 
-    public Long getId() {
+    public person(Long id, String nombreUsuario, Long telefono, String email) {
+    }
+
+    public static Long getId() {
         return id;
     }
 
-    public String getNombreUsuario() {
+    public static String getNombreUsuario() {
         return nombreUsuario;
     }
 
@@ -38,7 +41,7 @@ public class person {
         this.nombreUsuario = name;
     }
 
-    public String getEmail() {
+    public static String getEmail() {
         return email;
     }
 
@@ -46,7 +49,7 @@ public class person {
         this.email = email;
     }
 
-    public Long getTelefono() {
+    public static Long getTelefono() {
         return telefono;
     }
 
@@ -54,7 +57,7 @@ public class person {
         this.telefono = telefono;
     }
 
-    public String getClave() {
+    public static String getClave() {
         return clave;
     }
 

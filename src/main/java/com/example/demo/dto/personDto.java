@@ -9,13 +9,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class personaDto {
+public class personDto {
     private Long id;
     private String nombreUsuario;
     private String email;
-    private Long telefono;
     private String clave;
-
-    public personaDto(Long id, String nombreUsuario, Long telefono, String email) {
-    }
+    private int age;
 }

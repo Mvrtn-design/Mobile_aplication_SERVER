@@ -1,47 +1,65 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
 @Setter
-
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
+@Table(name= "person")
 public class person {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private static Long id;
+    private Long id;
 
-    @Column(name ="nombreUsuario", nullable = false)
-    private static String nombreUsuario;
+    @Column(name= "nombreUsuario",unique = true)
+    private String nombreUsuario;
 
-    @Column(name = "email")
-    private static String email;
+    @Column
+    private int age;
 
-    @Column(name = "telefono")
-    private static Long telefono;
+    private String clave;
 
-    @Column(name = "clave")
-    private static String clave;
 
-    public person(Long id, String nombreUsuario, Long telefono, String email) {
-    }
+    private String email;
 
-    public static Long getId() {
+
+    public Long getId() {
         return id;
     }
 
-    public static String getNombreUsuario() {
+    public String getNombreUsuario() {
         return nombreUsuario;
     }
 
-    public void setNombreUsuario(String name) {
-        this.nombreUsuario = name;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
-    public static String getEmail() {
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    public String getEmail() {
         return email;
     }
 
@@ -49,19 +67,5 @@ public class person {
         this.email = email;
     }
 
-    public static Long getTelefono() {
-        return telefono;
-    }
 
-    public void setTelefono(Long telefono) {
-        this.telefono = telefono;
-    }
-
-    public static String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
 }

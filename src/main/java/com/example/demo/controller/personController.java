@@ -39,13 +39,16 @@ public class personController {
     }
 
     //ACTUALIZAR PERSONA
-    public ResponseEntity actualizarPersona(@RequestBody personDto personDto) {
-        personDto actualizado = personServices.updatePerson(personDto,personDto.getId());
+    @PutMapping("{id}")
+    public ResponseEntity<personDto> actualizarPersona(@PathVariable("id")Long idPerson, @RequestBody personDto personDto) {
+        personDto actualizado = personServices.updatePerson(personDto,idPerson);
         return ResponseEntity.ok(actualizado);
     }
 
     //ELIMINAR PERSONA
-    public void deletePersonaById(@PathVariable("id") Long idPersona) {
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deletePersonaById(@PathVariable("id") Long idPersona) {
         personServices.deletePerson(idPersona);
+        return  ResponseEntity.ok("Person deleted successfully");
     }
 }

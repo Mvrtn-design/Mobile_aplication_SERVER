@@ -47,11 +47,11 @@ public class personServiceImpl implements personServices {
 
         person person = personRepository.save(aEditar);//al tener id, lo sobreescribe ya el save
         return personMap.mapToPersonDto(person);
-
     }
 
     @Override
     public void deletePerson(Long idPersona) {
+        person aBorrar = personRepository.findById(idPersona).orElseThrow(()->new ResourceNotFound("Elemento a borrar no encontrado"));
         personRepository.deleteById(idPersona);
     }
 }

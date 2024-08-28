@@ -13,7 +13,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name= "person")
-public class person {
+public class patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

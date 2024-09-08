@@ -1,19 +1,20 @@
 package com.example.demo.Paciente.map;
 
-import com.example.demo.Paciente.dto.PacienteDto;
-import com.example.demo.Paciente.entity.Paciente;
+import com.example.demo.Paciente.infrastructure.dto.PacienteDto;
+import com.example.demo.Paciente.domain.models.entity.Paciente;
 
 public class PacienteMap {
     public static PacienteDto mapToPacienteDto(Paciente paciente) {
         return new PacienteDto(
                 paciente.getId(),
                 paciente.getNombre(),
-                paciente.getEmail(),
                 paciente.getApellidos(),
+                paciente.getEdad(),
                 paciente.getTelefono(),
-                paciente.getEdad()
+                paciente.getEmail()
         );
     }
+
     public static Paciente mapToPaciente(PacienteDto pacienteDto) {
         return new Paciente(
                 pacienteDto.getId(),

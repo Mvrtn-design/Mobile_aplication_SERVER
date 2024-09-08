@@ -1,6 +1,6 @@
-package com.example.demo.Paciente.services;
+package com.example.demo.Paciente.application.services;
 
-import com.example.demo.Paciente.dto.PacienteDto;
+import com.example.demo.Paciente.infrastructure.dto.PacienteDto;
 
 import java.util.List;
 

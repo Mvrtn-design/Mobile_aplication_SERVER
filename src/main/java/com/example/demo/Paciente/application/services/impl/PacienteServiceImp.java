@@ -1,11 +1,11 @@
-package com.example.demo.Paciente.services.impl;
+package com.example.demo.Paciente.application.services.impl;
 
-import com.example.demo.Paciente.entity.Paciente;
-import com.example.demo.Paciente.exceptions.ResourceNotFound;
+import com.example.demo.Paciente.domain.models.entity.Paciente;
+import com.example.demo.exceptions.ResourceNotFound;
 import com.example.demo.Paciente.map.PacienteMap;
-import com.example.demo.Paciente.dto.PacienteDto;
-import com.example.demo.Paciente.repository.PacienteRepository;
-import com.example.demo.Paciente.services.PacienteService;
+import com.example.demo.Paciente.infrastructure.dto.PacienteDto;
+import com.example.demo.Paciente.infrastructure.repository.PacienteRepository;
+import com.example.demo.Paciente.application.services.PacienteService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -9,8 +9,7 @@ public class Tarea {
     private LocalDateTime fechaCreacion;
     private boolean completada;
 
-    public Tarea(Long id, String titulo, String descripcion, LocalDateTime fechaCreacion, boolean completada) {
-        this.id = id;
+    public Tarea(String titulo, String descripcion, LocalDateTime fechaCreacion, boolean completada) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fechaCreacion = fechaCreacion;

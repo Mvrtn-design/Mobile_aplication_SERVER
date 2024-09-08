@@ -1,4 +1,4 @@
-package com.example.demo.Paciente.entity;
+package com.example.demo.Paciente.domain.models.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

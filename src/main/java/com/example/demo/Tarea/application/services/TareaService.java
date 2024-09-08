@@ -8,12 +8,12 @@ import com.example.demo.Tarea.domain.ports.in.GetInformacionAdicionalUseCase;
 import java.util.List;
 import java.util.Optional;
 
-public class TareaServices implements CRUDTareaUseCase, GetInformacionAdicionalUseCase {
+public class TareaService implements CRUDTareaUseCase, GetInformacionAdicionalUseCase {
 
     private final CRUDTareaUseCase crudTareaUseCase;
     private final GetInformacionAdicionalUseCase getInformacionAdicionalUseCase;
 
-    public TareaServices(CRUDTareaUseCase crudTareaUseCase, GetInformacionAdicionalUseCase getInformacionAdicionalUseCase) {
+    public TareaService(CRUDTareaUseCase crudTareaUseCase, GetInformacionAdicionalUseCase getInformacionAdicionalUseCase) {
         this.crudTareaUseCase = crudTareaUseCase;
         this.getInformacionAdicionalUseCase = getInformacionAdicionalUseCase;
     }
@@ -45,7 +45,7 @@ public class TareaServices implements CRUDTareaUseCase, GetInformacionAdicionalU
     }
 
     @Override
-    public InformacionAdicional getInformacionAdicional(Long IdAdicional) {
-        return getInformacionAdicionalUseCase.getInformacionAdicional(IdAdicional);
+    public InformacionAdicional getInformacionAdicional(Long IdTarea) {
+        return getInformacionAdicionalUseCase.getInformacionAdicional(IdTarea);
     }
 }

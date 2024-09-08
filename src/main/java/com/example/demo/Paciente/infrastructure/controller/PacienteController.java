@@ -1,7 +1,7 @@
-package com.example.demo.Paciente.controller;
+package com.example.demo.Paciente.infrastructure.controller;
 
-import com.example.demo.Paciente.dto.PacienteDto;
-import com.example.demo.Paciente.services.PacienteService;
+import com.example.demo.Paciente.infrastructure.dto.PacienteDto;
+import com.example.demo.Paciente.application.services.PacienteService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
